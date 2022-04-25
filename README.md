@@ -157,14 +157,14 @@ Thus after applying the above code snippets, the final string output is “logan
 
 |Signed Word|Strength diagram|Output|Letters falsely identified|Letters not identified|
 |-----------|----------------|------|--------------------------|----------------------|
-|Logan|![Strength Diagram](assets/word1.png)|Logan|0|0|
-|Gabe|![Strength Diagram](assets/word2.png)|Gabm|1(m)|1(e)|
-|Amani|![Strength Diagram](assets/word3.png)|Amasi|1(s)|1(n)|
-|January|![Strength Diagram](assets/word4.png)|Jauaryc|1(c)|1(n)|
-|While|![Strength Diagram](assets/word5.png)|whilm|1(m)|1(e)|
-|Away|![Strength Diagram](assets/word6.png)|Away|0|0|
-|Zebra|![Strength Diagram](assets/word7.png)|mbra|1(m)|2(z,e)|
-|abcdefghijklmnopqrstuvwxyz|![Strength Diagram](assets/word8.png)|abcdmfhivlosopqprstuvwxy|e, g, j, k, m, n|m, s, z|
+|Logan|![Strength Diagram](assets/strength_diagrams/word1.png)|Logan|0|0|
+|Gabe|![Strength Diagram](assets/strength_diagrams/word2.png)|Gabm|1(m)|1(e)|
+|Amani|![Strength Diagram](assets/strength_diagrams/word3.png)|Amasi|1(s)|1(n)|
+|January|![Strength Diagram](assets/strength_diagrams/word4.png)|Jauaryc|1(c)|1(n)|
+|While|![Strength Diagram](assets/strength_diagrams/word5.png)|whilm|1(m)|1(e)|
+|Away|![Strength Diagram](assets/strength_diagrams/word6.png)|Away|0|0|
+|Zebra|![Strength Diagram](assets/strength_diagrams/word7.png)|mbra|1(m)|2(z,e)|
+|abcdefghijklmnopqrstuvwxyz|![Strength Diagram](assets/strength_diagrams/word8.png)|abcdmfhivlosopqprstuvwxy|e, g, j, k, m, n|m, s, z|
 ## Discussion
 
 &nbsp;&nbsp;&nbsp;&nbsp;Overall, we are very happy with the results we were able to produce, while there are certainly areas that could be improved upon, the results demonstrate a proof of concept. The neural network performed satisfacotrially, however, its performance is not uniform across all symbols. As evidenced by the classification reports, symbols that are visually similar, such as m, n, and s are far more frequently misclassified when compared to more unique symbols such as y or w. While the original intention of assessing the “strength” of each sign was to ignore frames in which the signer’s hand was in motion, it has the additional benefit of optimizing the performance of the neural network when used to classify video.  This is because in addition to dropping frames with blurred hand signals, if the classifier misclassifies, as long as it has reasonable consistent performance, it is unlikely to misclassify a sign as the same incorrect value for multiple frames, meaning that misclassifications will also frequently be ignored. Another area where the classifier struggled was for j and z, both of which involve some degree of movement. When capturing the test data, the participant demonstrated the motion while the frames were being captured. This produced acceptable results, however because the range of motion these symbols can be signed with is large (moving finger alone vs moving whole hand, different levels of motion pronouncement) they were frequently misclassified.
