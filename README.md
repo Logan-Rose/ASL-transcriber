@@ -16,7 +16,7 @@ If you would like to tweak the neural network, set the value of `TRAIN_NEW` to `
 
 ## Introduction
 
-&nbsp;&nbsp;&nbsp;&nbsp;The goal of this project to build a tool that can use a computer’s webcam to record someone spelling out a word uusing ASL, and transcribe the word to text output. While we recognize that in everyday use, ASL speakers use many symbols denoting words or ideas rather than exclusively using letters, given time and computing power limitations, we have opeted to focus on classifying individual letters. This project is a first step towards building a more comprehensive sign language translator, which would theoretically be able to observe more complex communications in sign language and translate them into text.
+&nbsp;&nbsp;&nbsp;&nbsp;The goal of this project to build a tool that can use a computer’s webcam to record someone spelling out a word using ASL, and transcribe the word to text output. While we recognize that in everyday use, ASL speakers use many symbols denoting words or ideas rather than exclusively using letters, given time and computing power limitations, we have opeted to focus on classifying individual letters. This project is a first step towards building a more comprehensive sign language translator, which would theoretically be able to observe more complex communications in sign language and translate them into text.
 
 ## High level Description
 
